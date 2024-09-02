@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- google fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Inter&display=swap" rel="stylesheet">
+  
+
+  <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" rel="stylesheet" />
+  
+  <title>Projeto - Amigo Secreto - José Jhonata</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>  
+    <!-- Imagem decorativa de um presente, com classe para estilização -->
+    <img class="page__image" src="./assets/imagem-presente.png" alt="Imagem de um presente">
+    
+    <div class="content"> <!-- Container principal do conteúdo -->
+      
+      <div class="content__corner-rectangle"></div><!-- Elemento decorativo no canto da área principal -->
+      
+      <div class="content__main"><!-- Área principal do conteúdo -->
+        
+        <section>
+          <!-- Seção para o formulário de entrada de dados -->
+          
+          <!-- Título principal da seção com destaque na palavra 'Secreto' -->
+          <h1 class="section__title">Amigo <span>Secreto</span></h1>
+          
+          <form class="form">
+            <!-- Formulário para adicionar nomes de amigos -->
+            
+            <!-- Rótulo para o campo de entrada de texto -->
+            <label class="form__label">
+              Digite o nome de um amigo
+            </label>
+            
+            <!-- Campo de entrada de texto para o nome do amigo -->
+            <input id="nome-amigo" class="form__input" type="text" placeholder="Nome do amigo">
+            
+            <div class="form__buttons">
+              <!-- Container para os botões de ação -->
+              
+              <!-- Botão para adicionar o nome do amigo à lista -->
+              <button onclick="adicionar()" type="button" class="button primary">Adicionar</button>
+              
+              <!-- Botão para sortear amigos entre os nomes adicionados -->
+              <button onclick="sortear()" type="button" class="button secondary">Sortear</button>
+              
+              <!-- Link para reiniciar o sorteio, limpando todos os dados -->
+              <a onclick="reiniciar()" href="#" class="form__link">Reiniciar</a>
+            </div>
+          </form>
+        </section>
+        
+        <section class="section--results">
+          <!-- Seção para exibir os resultados: amigos incluídos e sorteio -->
+          
+          <article><!-- Mostrar os amigos incluídos -->            
+            
+            <p class="friends__title">Amigos incluídos</p><!-- Título para os amigos incluídos -->         
+            
+            <div class="friends__container"><!-- Container para a lista de amigos incluídos -->
+              
+              <p id="lista-amigos"></p><!-- Parágrafo onde os nomes dos amigos serão exibidos dinamicamente -->
+            </div>
+
+          </article>
+          
+          <article><!-- Mostrar o resultado do sorteio -->            
+            
+            <p class="prizeDraw__title">Sorteio</p><!-- Título do artigo para o sorteio -->            
+            
+            <div class="prizeDraw__container"><!-- Container para a lista de sorteios realizados -->   
+
+              <p id="lista-sorteio"></p><!-- Parágrafo onde os resultados do sorteio serão exibidos dinamicamente -->
+              
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+  </main>
+  
+  <div class="background__detail"></div><!-- Detalhe decorativo de fundo para estilização -->
+  
+  <script src="js/app.js"></script>
+</body>
+
+</html>
